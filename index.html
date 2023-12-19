@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elige tu escapada</title>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Reserva tu escapada</h1>
+    </header>
+    <main>
+        <form id="escapadaForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="personas">Número de Personas:</label>
+            <select id="personas">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <h2>Tipo de Escapada:</h2>
+            <div id="selecOferta">
+                    <input type="radio" id="ciudad" name="escapada" value="ciudad" checked>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="radio" id="montana" name="escapada" value="montana">
+                    <label for="montana">Montaña</label>
+                    <input type="radio" id="playa" name="escapada" value="playa">
+                    <label for="playa">Playa</label>
+
+                <div class="ofertas">
+                    <figure class="oferta1">
+                        <img src="ciudad.jpg" alt="Imagen de la escapada a la ciudad">
+                        <div id="oferta-escapada1">100€</div>
+                    </figure>
+                    <figure class="oferta2">
+                        <img src="montana.jpg" alt="Imagen de la escapada a la montana">
+                        <div id="oferta-escapada2">130€</div>
+                    </figure>
+                    <figure class="oferta3">
+                        <img src="playa.jpg" alt="Imagen de la escapada a la playa">
+                        <div id="oferta-escapada3">150€</div>
+                    </figure>
+                </div>
+            </div>
+
+            <button type="button" onclick="calcularPrecio()">Calcular Precio</button>
+        </form>
+
+        <p id="precioTotal"></p>
+    </main>
+</body>
+
+</html>
