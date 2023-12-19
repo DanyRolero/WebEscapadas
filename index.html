@@ -17,10 +17,12 @@
     <main>
         <form id="escapadaForm">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" required onfocus="restablecerCampo(this)">
+            <div id="errorNombre" name="errorCampo" class="mensajeError">Por favor, introduzca un nombre correcto.</div>
 
             <label for="correo">Correo:</label>
-            <input type="email" id="correo" name="correo" required>
+            <input type="email" id="correo" name="correo" required onfocus="restablecerCampo(this)">
+            <div id="errorEmail" name="errorCampo" class="mensajeError">Por favor, introduzca un email correcto.</div>
 
             <label for="personas">Número de Personas:</label>
             <select id="personas">
