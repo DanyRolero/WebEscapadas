@@ -1,12 +1,18 @@
 function calcularPrecio() {
     //Obtener el nombre
     let nombre = document.getElementById('nombre').value.trim();
-    if(!validarNombre(nombre)) errorNombre();
+    if(!validarNombre(nombre)) { 
+        errorNombre();
+        return;
+    }
 
 
     //Obtener el correo
     let correo = document.getElementById('correo').value.trim();
-    if(!validarCorreo(correo)) errorEmail();
+    if(!validarCorreo(correo)) {
+        errorEmail();
+        return;
+    }
 
     //Obtener la cantidad de personas
     let personas = document.getElementById('personas');
@@ -65,7 +71,8 @@ function errorEmail() {
     document.getElementById('errorEmail').style.display = 'block';    
 }
 
-
+//------------------------------------------------------------------------
+//Vacía un campo y ooculta la alerta al hacer foco en dicho campo
 function restablecerCampo(campo) {
     campo.classList.remove('errorCampo');
     campo.value = "";
